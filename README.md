@@ -5,6 +5,13 @@ The following features are available:
 * Auto indent for blocks
 * Paragraph jumping with `[[` and similar mappings
 
+The following file extensions are accepted:
+* .obl
+* .esp
+* .esm
+* .obse
+* .oblivion
+
 # Installation
 This is supported by any version of Vim that is compatible with Vim 8.2 or newer.
 Install with your plugin manager of choice.
