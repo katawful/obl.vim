@@ -276,6 +276,7 @@ syn keyword csFunction
       \ AddScriptPackage
       \ AddSpell
       \ AddTopic
+      \ AdvSkill
       \ AdvancePCLevel
       \ AdvancePCSkill
       \ Autosave
@@ -507,10 +508,12 @@ syn keyword csFunction
       \ ModFactionRank
       \ ModFactionReaction
       \ ModPCAttribute
+      \ ModPCA
       \ ModPCFame
       \ ModPCInfamy
       \ ModPCMiscStat
       \ ModPCSkill
+      \ ModPCS
       \ ModScale
       \ MoveTo
       \ MoveToMarker
