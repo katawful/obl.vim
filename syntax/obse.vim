@@ -2,7 +2,7 @@
 " Language: OBSE Script (OBSEScript)
 " Original Creator: Ulthar Seramis
 " Maintainer: Kat
-" Latest Revision: 15 March 2021
+" Latest Revision: 08 August 2021
 
 if exists("b:current_syntax")
   finish
@@ -835,7 +835,6 @@ syn keyword obseFunction
       \ GetAlchMenuIngredientCount
       \ GetAllModLocalData
       \ GetAllies
-      \ GetAltControl
       \ GetAltControl2
       \ GetApparatusType
       \ GetArmorAR
@@ -1777,7 +1776,6 @@ syn keyword obseFunction
       \ RTan
       \ RTanh
       \ Rand
-      \ RefreshControlMap
       \ RefreshCurrentClimate
       \ ReleaseKey
       \ RemoveAllEffectItems
@@ -1812,7 +1810,7 @@ syn keyword obseFunction
       \ SetActiveQuest
       \ SetActorRespawns
       \ SetActorValueC
-      \ SetAltControl
+      \ SetAltControl2
       \ SetApparatusType
       \ SetArmorAR
       \ SetArmorType
@@ -3097,6 +3095,13 @@ syn keyword lcdFunction
       \ lcd_scale
       \ lcd_setfont
 " }}}
+
+" Deprecated: {{{
+syn keyword obDeprecated
+      \ SetAltControl
+      \ GetAltControl
+      \ RefreshControlMap
+" }}}
 " }}}
 
 if !exists("did_obse_inits")
@@ -3155,6 +3160,7 @@ if !exists("did_obse_inits")
   hi def link haelFunction Function
   hi def link lcdFunction Function
   hi def link skillAttribute String
+  hi def link obDeprecated WarningMsg
 
 endif
 
