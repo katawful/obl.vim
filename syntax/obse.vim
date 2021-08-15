@@ -13,10 +13,9 @@ let b:current_syntax = 'obse'
 syntax case ignore
 
 " Statements {{{
-syn keyword obseStatement set let skipwhite
+syn keyword obseStatement set let to skipwhite
 " the second part needs to be separate as to not mess up the next group
-syn match obseStatementTwo "\<to\>"
-syn match obseStatementThree ":="
+syn match obseStatementTwo ":="
 " }}}
 
 " Regex matched objects {{{
@@ -3109,7 +3108,6 @@ if !exists("did_obse_inits")
   let did_obse_inits = 1
   hi def link obseStatement Statement
   hi def link obseStatementTwo Statement
-  hi def link obseStatementThree Statement
   hi def link obseDescBlock String
   hi def link obseComment Comment
   hi def link obseString String
