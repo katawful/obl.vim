@@ -51,16 +51,20 @@ syn match obseFloat '[-+]\d\+\.\d*'
 setlocal commentstring=;%s
 syn region obseComment start=";" end="$" keepend fold contains=obseToDo
 syn region obseString start=/"/ end=/"/ keepend fold contains=obseStringFormatting
-syn match obseStringFormatting "%g" contained
 syn match obseStringFormatting "%%" contained
+syn match obseStringFormatting "%a" contained
 syn match obseStringFormatting "%B" contained
 syn match obseStringFormatting "%b" contained
 syn match obseStringFormatting "%c" contained
 syn match obseStringFormatting "%e" contained
+syn match obseStringFormatting "%g" contained
 syn match obseStringFormatting "%i" contained
 syn match obseStringFormatting "%k" contained
 syn match obseStringFormatting "%n" contained
 syn match obseStringFormatting "%p" contained
+syn match obseStringFormatting "%ps" contained
+syn match obseStringFormatting "%pp" contained
+syn match obseStringFormatting "%po" contained
 syn match obseStringFormatting "%q" contained
 syn match obseStringFormatting "%r" contained
 syn match obseStringFormatting "%v" contained
