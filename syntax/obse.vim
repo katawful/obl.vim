@@ -656,13 +656,8 @@ syn keyword csFunction
 
 " OBSE Functions {{{
 syn keyword obseFunction
-      \ ACos
-      \ AHammerKey
-      \ ASin
-      \ ATan
-      \ ATan2
-      \ AVString
       \ Abs
+      \ ACos
       \ Activate2
       \ ActorValueToCode
       \ ActorValueToString
@@ -674,14 +669,21 @@ syn keyword obseFunction
       \ AddItemNS
       \ AddMagicEffectCounter
       \ AddMagicEffectCounterC
+			\ AddMECounter
+			\ AddMECounterC
       \ AddSpellNS
       \ AddToLeveledList
+      \ AHammerKey
       \ AnimPathIncludes
       \ AppendToName
       \ AsciiToChar
+      \ ASin
+      \ ATan
+      \ ATan2
+      \ AVString
+      \ CalcLeveledItem
       \ CalcLevItemNR
       \ CalcLevItems
-      \ CalcLeveledItem
       \ Call
       \ CanCastPower
       \ CanCorpseCheck
@@ -727,8 +729,8 @@ syn keyword obseFunction
       \ Con_SetGameSetting
       \ Con_SetGamma
       \ Con_SetHDRParam
-      \ Con_SetINISetting
       \ Con_SetImageSpaceGlow
+      \ Con_SetINISetting
       \ Con_SetSkyParam
       \ Con_SetTargetRefraction
       \ Con_SetTargetRefractionFire
@@ -750,8 +752,8 @@ syn keyword obseFunction
       \ CopyFemaleGroundPath
       \ CopyFemaleIconPath
       \ CopyHair
-      \ CopyIR
       \ CopyIconPath
+      \ CopyIR
       \ CopyMaleBipedPath
       \ CopyMaleGroundPath
       \ CopyMaleIconPath
@@ -773,18 +775,18 @@ syn keyword obseFunction
       \ DATan2
       \ DCos
       \ DCosh
-      \ DSin
-      \ DSinh
-      \ DTan
-      \ DTanh
       \ DebugPrint
       \ DeleteFromInputText
       \ DeleteReference
       \ DisableControl
       \ DisableKey
       \ DisableMouse
-      \ DispelNthAE
       \ DispelNthActiveEffect
+      \ DispelNthAE
+      \ DSin
+      \ DSinh
+      \ DTan
+      \ DTanh
       \ EnableControl
       \ EnableKey
       \ EnableMouse
@@ -804,14 +806,6 @@ syn keyword obseFunction
       \ GenerateIdentityMatrix
       \ GenerateRotationMatrix
       \ GenerateZeroMatrix
-      \ GetAPBowEnch
-      \ GetAPEnch
-      \ GetAPPoison
-      \ GetAVC
-      \ GetAVForBaseActor
-      \ GetAVForBaseActorC
-      \ GetAVMod
-      \ GetAVModC
       \ GetActiveEffectCasters
       \ GetActiveEffectCodes
       \ GetActiveEffectCount
@@ -836,10 +830,13 @@ syn keyword obseFunction
       \ GetAlchMenuApparatus
       \ GetAlchMenuIngredient
       \ GetAlchMenuIngredientCount
-      \ GetAllModLocalData
       \ GetAllies
+      \ GetAllModLocalData
       \ GetAltControl2
+      \ GetAPBowEnch
+      \ GetAPEnch
       \ GetApparatusType
+      \ GetAPPoison
       \ GetArmorAR
       \ GetArmorType
       \ GetArrayVariable
@@ -847,13 +844,18 @@ syn keyword obseFunction
       \ GetArrowProjectileEnchantment
       \ GetArrowProjectilePoison
       \ GetAttackDamage
+      \ GetAVC
+      \ GetAVForBaseActor
+      \ GetAVForBaseActorC
+      \ GetAVMod
+      \ GetAVModC
       \ GetBarterItem
       \ GetBarterItemQuantity
+      \ GetBaseActorValueC
       \ GetBaseAV2
       \ GetBaseAV2C
       \ GetBaseAV3
       \ GetBaseAV3C
-      \ GetBaseActorValueC
       \ GetBaseItems
       \ GetBaseObject
       \ GetBipedIconPath
@@ -919,12 +921,12 @@ syn keyword obseFunction
       \ GetCombatStyleDodgeBackTimerMin
       \ GetCombatStyleDodgeBackUnderAttackMult
       \ GetCombatStyleDodgeChance
+      \ GetCombatStyleDodgeFatigueModBase
+      \ GetCombatStyleDodgeFatigueModMult
       \ GetCombatStyleDodgeFWAttackingMult
       \ GetCombatStyleDodgeFWNotAttackingMult
       \ GetCombatStyleDodgeFWTimerMax
       \ GetCombatStyleDodgeFWTimerMin
-      \ GetCombatStyleDodgeFatigueModBase
-      \ GetCombatStyleDodgeFatigueModMult
       \ GetCombatStyleDodgeLRChance
       \ GetCombatStyleDodgeLRTimerMax
       \ GetCombatStyleDodgeLRTimerMin
@@ -947,9 +949,9 @@ syn keyword obseFunction
       \ GetCombatStylePowerAttackFatigueModBase
       \ GetCombatStylePowerAttackFatigueModMult
       \ GetCombatStylePrefersRanged
+      \ GetCombatStyleRangedStandoffDist
       \ GetCombatStyleRangeMaxMult
       \ GetCombatStyleRangeOptimalMult
-      \ GetCombatStyleRangedStandoffDist
       \ GetCombatStyleRejectsYields
       \ GetCombatStyleRushAttackChance
       \ GetCombatStyleRushAttackDistMult
@@ -999,13 +1001,13 @@ syn keyword obseFunction
       \ GetDoorTeleportZ
       \ GetEditorID
       \ GetEditorSize
-      \ GetEnchMenuBaseItem
-      \ GetEnchMenuEnchItem
-      \ GetEnchMenuSoulgem
       \ GetEnchantment
       \ GetEnchantmentCharge
       \ GetEnchantmentCost
       \ GetEnchantmentType
+      \ GetEnchMenuBaseItem
+      \ GetEnchMenuEnchItem
+      \ GetEnchMenuSoulgem
       \ GetEquipmentSlot
       \ GetEquipmentSlotMask
       \ GetEquippedCurrentCharge
@@ -1015,7 +1017,6 @@ syn keyword obseFunction
       \ GetEquippedTorchTimeLeft
       \ GetEquippedWeaponPoison
       \ GetEyes
-      \ GetFPS
       \ GetFallTimer
       \ GetFirstRef
       \ GetFirstRefInCell
@@ -1026,6 +1027,7 @@ syn keyword obseFunction
       \ GetFollowers
       \ GetFormFromMod
       \ GetFormIDString
+      \ GetFPS
       \ GetFullGoldValue
       \ GetGameDifficulty
       \ GetGameLoaded
@@ -1033,9 +1035,9 @@ syn keyword obseFunction
       \ GetGodMode
       \ GetGoldValue
       \ GetGridsToLoad
-      \ GetHDRValue
       \ GetHair
       \ GetHairColor
+      \ GetHDRValue
       \ GetHidesAmulet
       \ GetHidesRings
       \ GetHighActors
@@ -1046,8 +1048,8 @@ syn keyword obseFunction
       \ GetIngredient
       \ GetIngredientChance
       \ GetInputText
-      \ GetInvRefsForItem
       \ GetInventoryObject
+      \ GetInvRefsForItem
       \ GetItems
       \ GetKeyName
       \ GetKeyPress
@@ -1060,35 +1062,19 @@ syn keyword obseFunction
       \ GetLastTransactionQuantity
       \ GetLastUniqueCreatedPotion
       \ GetLastUsedSigilStone
+      \ GetLeveledSpells
       \ GetLevItemByLevel
       \ GetLevItemIndexByForm
       \ GetLevItemIndexByLevel
-      \ GetLeveledSpells
       \ GetLightDuration
-      \ GetLightRGB
-      \ GetLightRadius
       \ GetLightningFrequency
+      \ GetLightRadius
+      \ GetLightRGB
       \ GetLinkedDoor
       \ GetLocalGravity
       \ GetLoopSound
       \ GetLowActors
       \ GetLuckModifiedSkill
-      \ GetMEBaseCost
-      \ GetMEBaseCostC
-      \ GetMEEBarter
-      \ GetMEEBarterC
-      \ GetMEEnchant
-      \ GetMEEnchantC
-      \ GetMEOtherActorValue
-      \ GetMEOtherActorValueC
-      \ GetMEProjSpeed
-      \ GetMEProjSpeedC
-      \ GetMESchool
-      \ GetMESchoolC
-      \ GetMEUsedObject
-      \ GetMIEffectCount
-      \ GetMIType
-      \ GetMPSpell
       \ GetMagicEffectAreaSound
       \ GetMagicEffectAreaSoundC
       \ GetMagicEffectBarterFactor
@@ -1135,35 +1121,67 @@ syn keyword obseFunction
       \ GetMagicItemEffectCount
       \ GetMagicItemType
       \ GetMagicProjectileSpell
-      \ GetMapMarkerType
       \ GetMapMarkers
+      \ GetMapMarkerType
       \ GetMapMenuMarkerName
       \ GetMapMenuMarkerRef
       \ GetMaxAV
       \ GetMaxAVC
       \ GetMaxLevel
+			\ GetMEAreaSound
+			\ GetMEAreaSoundC
+			\ GetMEBarterC
+      \ GetMEBaseCost
+      \ GetMEBaseCostC
+			\ GetMEBoltSound
+			\ GetMEBoltSoundC
+			\ GetMECastingSound
+			\ GetMECastingSoundC
+			\ GetMECounters
+			\ GetMECountersC
+      \ GetMEEBarter
+      \ GetMEEBarterC
+      \ GetMEEnchant
+      \ GetMEEnchantC
+			\ GetMEEnchantShader
+			\ GetMEEnchantShaderC
+			\ GetMEHitShader
+			\ GetMEHitShaderC
+			\ GetMEHitSound
+			\ GetMEHitSoundC
+			\ GetMEIcon
+			\ GetMEIconC
+			\ GetMELight
+			\ GetMELightC
+			\ GetMEModel
+			\ GetMEModelC
+			\ GetMEName
+			\ GetMENameC
+			\ GetMENumCounters
+			\ GetMENumCountersC
+      \ GetMEOtherActorValue
+      \ GetMEOtherActorValueC
+      \ GetMEProjSpeed
+      \ GetMEProjSpeedC
       \ GetMerchantContainer
+			\ GetMEResistValue
+			\ GetMEResistValueC
+      \ GetMESchool
+      \ GetMESchoolC
       \ GetMessageBoxType
+      \ GetMEUsedObject
+			\ GetMEUsedObjectC
       \ GetMiddleHighActors
+      \ GetMIEffectCount
       \ GetMinLevel
+      \ GetMIType
+      \ GetModelPath
       \ GetModIndex
       \ GetModLocalData
-      \ GetModelPath
       \ GetMouseButtonPress
       \ GetMouseButtonsSwapped
+      \ GetMPSpell
       \ GetNextRef
-      \ GetNthAEAV
-      \ GetNthAEBoundItem
-      \ GetNthAECaster
-      \ GetNthAECode
-      \ GetNthAEData
-      \ GetNthAEDuration
-      \ GetNthAEIndex
-      \ GetNthAEMagicEnchantObject
-      \ GetNthAEMagicItem
-      \ GetNthAEMagnitude
-      \ GetNthAESummonRef
-      \ GetNthAETime
       \ GetNthAcitveEffectMagnitude
       \ GetNthActiveEffectActorValue
       \ GetNthActiveEffectBoundItem
@@ -1178,18 +1196,20 @@ syn keyword obseFunction
       \ GetNthActiveEffectMagnitude
       \ GetNthActiveEffectSummonRef
       \ GetNthActiveEffectTimeElapsed
+      \ GetNthAEAV
+      \ GetNthAEBoundItem
+      \ GetNthAECaster
+      \ GetNthAECode
+      \ GetNthAEData
+      \ GetNthAEDuration
+      \ GetNthAEIndex
+      \ GetNthAEMagicEnchantObject
+      \ GetNthAEMagicItem
+      \ GetNthAEMagnitude
+      \ GetNthAESummonRef
+      \ GetNthAETime
       \ GetNthChildRef
       \ GetNthDetectedActor
-      \ GetNthEIAV
-      \ GetNthEIArea
-      \ GetNthEICode
-      \ GetNthEIDuration
-      \ GetNthEIMagnitude
-      \ GetNthEIName
-      \ GetNthEIRange
-      \ GetNthEISSchool
-      \ GetNthEISVisualEffect
-      \ GetNthEIScript
       \ GetNthEffectItem
       \ GetNthEffectItemActorValue
       \ GetNthEffectItemArea
@@ -1202,6 +1222,16 @@ syn keyword obseFunction
       \ GetNthEffectItemScriptName
       \ GetNthEffectItemScriptSchool
       \ GetNthEffectItemScriptVisualEffect
+      \ GetNthEIArea
+      \ GetNthEIAV
+      \ GetNthEICode
+      \ GetNthEIDuration
+      \ GetNthEIMagnitude
+      \ GetNthEIName
+      \ GetNthEIRange
+      \ GetNthEIScript
+      \ GetNthEISSchool
+      \ GetNthEISVisualEffect
       \ GetNthExplicitRef
       \ GetNthFaction
       \ GetNthFactionRankName
@@ -1211,6 +1241,8 @@ syn keyword obseFunction
       \ GetNthLevItemLevel
       \ GetNthMagicEffectCounter
       \ GetNthMagicEffectCounterC
+			\ GetNthMECounter
+			\ GetNthMECounterC
       \ GetNthModName
       \ GetNthPackage
       \ GetNthPlayerSpell
@@ -1219,6 +1251,7 @@ syn keyword obseFunction
       \ GetNthSpell
       \ GetNumChildRefs
       \ GetNumDetectedActors
+      \ GetNumericINISetting
       \ GetNumExplicitRefs
       \ GetNumFactions
       \ GetNumFollowers
@@ -1232,28 +1265,17 @@ syn keyword obseFunction
       \ GetNumRanks
       \ GetNumRefs
       \ GetNumRefsInCell
-      \ GetNumericINISetting
-      \ GetOBSERevision
-      \ GetOBSEVersion
       \ GetObjectCharge
       \ GetObjectHealth
       \ GetObjectType
       \ GetOblivionDirectory
+      \ GetOBSERevision
+      \ GetOBSEVersion
       \ GetOpenKey
       \ GetOpenSound
       \ GetOwner
       \ GetOwningFactionRank
       \ GetOwningFactionRequiredRank
-      \ GetPCAttributeBonus
-      \ GetPCAttributeBonusC
-      \ GetPCLastDroppedItem
-      \ GetPCLastDroppedItemRef
-      \ GetPCLastHorse
-      \ GetPCLastLoadDoor
-      \ GetPCMajorSkillUps
-      \ GetPCMovementSpeedModifier
-      \ GetPCSpellEffectivenessModifier
-      \ GetPCTrainingSessionsUsed
       \ GetPackageAllowFalls
       \ GetPackageAllowSwimming
       \ GetPackageAlwaysRun
@@ -1289,15 +1311,25 @@ syn keyword obseFunction
       \ GetPathNodePos
       \ GetPathNodesInRadius
       \ GetPathNodesInRect
+      \ GetPCAttributeBonus
+      \ GetPCAttributeBonusC
+      \ GetPCLastDroppedItem
+      \ GetPCLastDroppedItemRef
+      \ GetPCLastHorse
+      \ GetPCLastLoadDoor
+      \ GetPCMajorSkillUps
+      \ GetPCMovementSpeedModifier
+      \ GetPCSpellEffectivenessModifier
+      \ GetPCTrainingSessionsUsed
       \ GetPlayerBirthsign
       \ GetPlayerSkillAdvances
       \ GetPlayerSkillAdvancesC
       \ GetPlayerSkillUse
       \ GetPlayerSkillUseC
-      \ GetPlayerSpell
-      \ GetPlayerSpellCount
       \ GetPlayersLastActivatedLoadDoor
       \ GetPlayersLastRiddenHorse
+      \ GetPlayerSpell
+      \ GetPlayerSpellCount
       \ GetPluginVersion
       \ GetPlyerSpellCount
       \ GetProcessLevel
@@ -1354,10 +1386,10 @@ syn keyword obseFunction
       \ GetSpellMagickaCost
       \ GetSpellMasteryLevel
       \ GetSpellPCStart
+      \ GetSpells
       \ GetSpellSchool
       \ GetSpellScriptEffectAlwaysApplies
       \ GetSpellType
-      \ GetSpells
       \ GetStringGameSetting
       \ GetStringINISetting
       \ GetSunDamage
@@ -1373,6 +1405,8 @@ syn keyword obseFunction
       \ GetTileChildren
       \ GetTileTraits
       \ GetTimeLeft
+      \ GetTotalActiveEffectMagnitude
+      \ GetTotalActiveEffectMagnitudeC
       \ GetTotalAEAbilityMagnitude
       \ GetTotalAEAbilityMagnitudeC
       \ GetTotalAEAlchemyMagnitude
@@ -1393,13 +1427,11 @@ syn keyword obseFunction
       \ GetTotalAEPowerMagnitudeC
       \ GetTotalAESpellMagnitude
       \ GetTotalAESpellMagnitudeC
-      \ GetTotalActiveEffectMagnitude
-      \ GetTotalActiveEffectMagnitudeC
       \ GetTotalPCAttributeBonus
       \ GetTrainerLevel
       \ GetTrainerSkill
-      \ GetTransDelta
       \ GetTransactionInfo
+      \ GetTransDelta
       \ GetTravelHorse
       \ GetUsedPowers
       \ GetUserTime
@@ -1497,8 +1529,8 @@ syn keyword obseFunction
       \ IsHiddenDoor
       \ IsIconPathValid
       \ IsInAir
-      \ IsInOblivion
       \ IsIngredient
+      \ IsInOblivion
       \ IsJumping
       \ IsKey
       \ IsKeyDisabled
@@ -1509,24 +1541,6 @@ syn keyword obseFunction
       \ IsLight
       \ IsLightCarriable
       \ IsLoadDoor
-      \ IsMECanRecover
-      \ IsMECanRecoverC
-      \ IsMEDetrimental
-      \ IsMEDetrimentalC
-      \ IsMEForEnchanting
-      \ IsMEForEnchantingC
-      \ IsMEForSpellmaking
-      \ IsMEForSpellmakingC
-      \ IsMEHostile
-      \ IsMEHostileC
-      \ IsMEMagnitudePercent
-      \ IsMEMagnitudePercentC
-      \ IsMEOnSelfAllowed
-      \ IsMEOnSelfAllowedC
-      \ IsMEOnTargetAllowed
-      \ IsMEOnTargetAllowedC
-      \ IsMEOnTouchAllowed
-      \ IsMEOnTouchAllowedC
       \ IsMagicEffectCanRecover
       \ IsMagicEffectCanRecoverC
       \ IsMagicEffectDetrimental
@@ -1549,25 +1563,43 @@ syn keyword obseFunction
       \ IsMajor
       \ IsMajorC
       \ IsMapMarkerVisible
+      \ IsMECanRecover
+      \ IsMECanRecoverC
+      \ IsMEDetrimental
+      \ IsMEDetrimentalC
+      \ IsMEForEnchanting
+      \ IsMEForEnchantingC
+      \ IsMEForSpellmaking
+      \ IsMEForSpellmakingC
+      \ IsMEHostile
+      \ IsMEHostileC
+      \ IsMEMagnitudePercent
+      \ IsMEMagnitudePercentC
+      \ IsMEOnSelfAllowed
+      \ IsMEOnSelfAllowedC
+      \ IsMEOnTargetAllowed
+      \ IsMEOnTargetAllowedC
+      \ IsMEOnTouchAllowed
+      \ IsMEOnTouchAllowedC
       \ IsMinimalUseDoor
-      \ IsModLoaded
       \ IsModelPathValid
+      \ IsModLoaded
       \ IsMovingBackward
       \ IsMovingForward
       \ IsMovingLeft
       \ IsMovingRight
       \ IsNaked
       \ IsNthActiveEffectApplied
-      \ IsNthEISHostile
-      \ IsNthEffectItemScriptHostile
       \ IsNthEffectItemScripted
+      \ IsNthEffectItemScriptHostile
+      \ IsNthEISHostile
       \ IsOblivionGate
       \ IsOblivionInterior
       \ IsOblivionWorld
       \ IsOffLimits
       \ IsOnGround
-      \ IsPCLevelOffset
       \ IsPathNodeDisabled
+      \ IsPCLevelOffset
       \ IsPersistent
       \ IsPlayable
       \ IsPlayable2
@@ -1584,8 +1616,8 @@ syn keyword obseFunction
       \ IsRacePlayable
       \ IsRecoiling
       \ IsRefDeleted
-      \ IsRefEssential
       \ IsReference
+      \ IsRefEssential
       \ IsScripted
       \ IsSigilStone
       \ IsSoulGem
@@ -1611,31 +1643,11 @@ syn keyword obseFunction
       \ LogicalNot
       \ LogicalOr
       \ LogicalXor
-      \ MEHasNoArea
-      \ MEHasNoAreaC
-      \ MEHasNoDuration
-      \ MEHasNoDurationC
-      \ MEHasNoHitEffect
-      \ MEHasNoHitEffectC
-      \ MEHasNoIngredient
-      \ MEHasNoIngredientC
-      \ MEHasNoMagnitude
-      \ MEHasNoMagnitudeC
-      \ MEUsesArmor
-      \ MEUsesArmorC
-      \ MEUsesAttribute
-      \ MEUsesAttributeC
-      \ MEUsesCreature
-      \ MEUsesCreatureC
-      \ MEUsesOtherActorValue
-      \ MEUsesOtherActorValueC
-      \ MEUsesWeapon
-      \ MEUsesWeaponC
       \ MagicEffectCodeFromChars
-      \ MagicEffectFXPersists
-      \ MagicEffectFXPersistsC
       \ MagicEffectFromChars
       \ MagicEffectFromCode
+      \ MagicEffectFXPersists
+      \ MagicEffectFXPersistsC
       \ MagicEffectHasNoArea
       \ MagicEffectHasNoAreaC
       \ MagicEffectHasNoDuration
@@ -1667,11 +1679,9 @@ syn keyword obseFunction
       \ MagicItemHasEffectCountCode
       \ MagicItemHasEffectItemScript
       \ MatAdd
+      \ MatchPotion
       \ MatInv
       \ MatMult
-      \ MatScale
-      \ MatSubtract
-      \ MatchPotion
       \ MatrixAdd
       \ MatrixDeterminant
       \ MatrixInvert
@@ -1681,20 +1691,48 @@ syn keyword obseFunction
       \ MatrixSubtract
       \ MatrixTrace
       \ MatrixTranspose
+      \ MatScale
+      \ MatSubtract
+			\ MECodeFromChars
+			\ MEFXPersists
+			\ MEFXPersistsC
+      \ MEHasNoArea
+      \ MEHasNoAreaC
+      \ MEHasNoDuration
+      \ MEHasNoDurationC
+      \ MEHasNoHitEffect
+      \ MEHasNoHitEffectC
+      \ MEHasNoIngredient
+      \ MEHasNoIngredientC
+      \ MEHasNoMagnitude
+      \ MEHasNoMagnitudeC
       \ MenuHoldKey
       \ MenuReleaseKey
       \ MenuTapKey
       \ MessageBoxEx
       \ MessageEx
-      \ ModAV2
-      \ ModAVC
-      \ ModAVMod
-      \ ModAVModC
+      \ MEUsesArmor
+      \ MEUsesArmorC
+      \ MEUsesAttribute
+      \ MEUsesAttributeC
+      \ MEUsesCreature
+      \ MEUsesCreatureC
+      \ MEUsesOtherActorValue
+      \ MEUsesOtherActorValueC
+			\ MEUsesSkill
+			\ MEUsesSkillC
+      \ MEUsesWeapon
+      \ MEUsesWeaponC
       \ ModActorValue2
       \ ModActorValueC
       \ ModArmorAR
       \ ModAttackDamage
+      \ ModAV2
+      \ ModAVC
+      \ ModAVMod
+      \ ModAVModC
       \ ModCurrentCharge
+      \ ModelPathIncludes
       \ ModEnchantmentCharge
       \ ModEnchantmentCost
       \ ModEquippedCurrentCharge
@@ -1710,16 +1748,16 @@ syn keyword obseFunction
       \ ModMaleIconPath
       \ ModModelPath
       \ ModName
-      \ ModNthAEMagnitude
       \ ModNthActiveEffectMagnitude
-      \ ModNthEIArea
-      \ ModNthEIDuration
-      \ ModNthEIMagnitude
-      \ ModNthEISName
+      \ ModNthAEMagnitude
       \ ModNthEffectItemArea
       \ ModNthEffectItemDuration
       \ ModNthEffectItemMagnitude
       \ ModNthEffectItemScriptName
+      \ ModNthEIArea
+      \ ModNthEIDuration
+      \ ModNthEIMagnitude
+      \ ModNthEISName
       \ ModObjectCharge
       \ ModObjectHealth
       \ ModPCMovementSpeed
@@ -1732,7 +1770,6 @@ syn keyword obseFunction
       \ ModWeaponReach
       \ ModWeaponSpeed
       \ ModWeight
-      \ ModelPathIncludes
       \ MoveMouseX
       \ MoveMouseY
       \ MoveTextInputCursor
@@ -1769,16 +1806,12 @@ syn keyword obseFunction
       \ PrintToConsole
       \ QuestExists
       \ RACos
+      \ Rand
       \ RASin
       \ RATan
       \ RATan2
       \ RCos
       \ RCosh
-      \ RSin
-      \ RSinh
-      \ RTan
-      \ RTanh
-      \ Rand
       \ RefreshCurrentClimate
       \ ReleaseKey
       \ RemoveAllEffectItems
@@ -1796,6 +1829,8 @@ syn keyword obseFunction
       \ RemoveNthLevItem
       \ RemoveNthMagicEffectCounter
       \ RemoveNthMagicEffectCounterC
+			\ RemoveNthMECounter
+			\ RemoveNthMECounterC
       \ RemoveScript
       \ RemoveSpellNS
       \ ResetAllVariables
@@ -1804,12 +1839,13 @@ syn keyword obseFunction
       \ RightShift
       \ RotMat
       \ RowVec
+      \ RSin
+      \ RSinh
+      \ RTan
+      \ RTanh
       \ RunBatchScript
       \ RunScriptLine
       \ SaveIP
-      \ SetAVC
-      \ SetAVMod
-      \ SetAVModC
       \ SetActiveQuest
       \ SetActorRespawns
       \ SetActorValueC
@@ -1821,6 +1857,9 @@ syn keyword obseFunction
       \ SetArrowProjectileEnchantment
       \ SetArrowProjectilePoison
       \ SetAttackDamage
+      \ SetAVC
+      \ SetAVMod
+      \ SetAVModC
       \ SetBaseForm
       \ SetBipedIconPathEX
       \ SetBipedModelPathEX
@@ -1878,12 +1917,12 @@ syn keyword obseFunction
       \ SetCombatStyleDodgeBackTimerMin
       \ SetCombatStyleDodgeBackUnderAttackMult
       \ SetCombatStyleDodgeChance
+      \ SetCombatStyleDodgeFatigueModBase
+      \ SetCombatStyleDodgeFatigueModMult
       \ SetCombatStyleDodgeFWAttackingMult
       \ SetCombatStyleDodgeFWNotAttackingMult
       \ SetCombatStyleDodgeFWTimerMax
       \ SetCombatStyleDodgeFWTimerMin
-      \ SetCombatStyleDodgeFatigueModBase
-      \ SetCombatStyleDodgeFatigueModMult
       \ SetCombatStyleDodgeLRChance
       \ SetCombatStyleDodgeLRTimerMax
       \ SetCombatStyleDodgeLRTimerMin
@@ -1906,9 +1945,9 @@ syn keyword obseFunction
       \ SetCombatStylePowerAttackFatigueModBase
       \ SetCombatStylePowerAttackFatigueModMult
       \ SetCombatStylePrefersRanged
+      \ SetCombatStyleRangedStandoffDist
       \ SetCombatStyleRangeMaxMult
       \ SetCombatStyleRangeOptimalMult
-      \ SetCombatStyleRangedStandoffDist
       \ SetCombatStyleRejectsYields
       \ SetCombatStyleRushAttackChance
       \ SetCombatStyleRushAttackDistMult
@@ -1953,12 +1992,12 @@ syn keyword obseFunction
       \ SetFunctionValue
       \ SetGameDifficulty
       \ SetGoldValue
-      \ SetGoldValueT
       \ SetGoldValue_T
-      \ SetHDRValue
+      \ SetGoldValueT
       \ SetHair
       \ SetHarvested
       \ SetHasBeenPickedUp
+      \ SetHDRValue
       \ SetHidesAmulet
       \ SetHidesRings
       \ SetHotKeyItem
@@ -1975,14 +2014,14 @@ syn keyword obseFunction
       \ SetIsOblivionGate
       \ SetIsPlayable
       \ SetLightDuration
-      \ SetLightRGB
-      \ SetLightRadius
       \ SetLightningFrequency
+      \ SetLightRadius
+      \ SetLightRGB
       \ SetLocalGravity
       \ SetLocalGravityVector
       \ SetLoopSound
       \ SetLowLevelProcessing
-      \ SetMPSpell
+			\ SetMaagicEffectUseActorValue
       \ SetMagicEffectAreaSound
       \ SetMagicEffectAreaSoundC
       \ SetMagicEffectBarterFactor
@@ -2001,12 +2040,12 @@ syn keyword obseFunction
       \ SetMagicEffectEnchantFactorC
       \ SetMagicEffectEnchantShader
       \ SetMagicEffectEnchantShaderC
-      \ SetMagicEffectFXPersists
-      \ SetMagicEffectFXPersistsC
       \ SetMagicEffectForEnchanting
       \ SetMagicEffectForEnchantingC
       \ SetMagicEffectForSpellmaking
       \ SetMagicEffectForSpellmakingC
+      \ SetMagicEffectFXPersists
+      \ SetMagicEffectFXPersistsC
       \ SetMagicEffectHitShader
       \ SetMagicEffectHitShaderC
       \ SetMagicEffectHitSound
@@ -2049,6 +2088,7 @@ syn keyword obseFunction
       \ SetMagicEffectResistValueC
       \ SetMagicEffectSchool
       \ SetMagicEffectSchoolC
+			\ SetMagicEffectUseActorValueC
       \ SetMagicEffectUsedObject
       \ SetMagicEffectUsedObjectC
       \ SetMagicEffectUsesActorValue
@@ -2070,32 +2110,99 @@ syn keyword obseFunction
       \ SetMaleIconPath
       \ SetMapMarkerType
       \ SetMapMarkerVisible
+			\ SetMEAreaSound
+			\ SetMEAreaSoundC
+			\ SetMEBarterFactor
+			\ SetMEBarterFactorC
+			\ SetMEBaseCost
+			\ SetMEBaseCostC
+			\ SetMEBoltSound
+			\ SetMEBoltSoundC
+			\ SetMECanRecover
+			\ SetMECanRecoverC
+			\ SetMECastingSound
+			\ SetMECastingSoundC
+			\ SetMEEnchantFactor
+			\ SetMEEnchantFactorC
+			\ SetMEEnchantShader
+			\ SetMEEnchantShaderC
+			\ SetMEForEnchanting
+			\ SetMEForEnchantingC
+			\ SetMEForSpellmaking
+			\ SetMEForSpellmakingC
+			\ SetMEFXPersists
+			\ SetMEFXPersistsC
+			\ SetMEHitShader
+			\ SetMEHitShaderC
+			\ SetMEHitSound
+			\ SetMEHitSoundC
+			\ SetMEIcon
+			\ SetMEIconC
+			\ SetMEIsDetrimental
+			\ SetMEIsDetrimentalC
+			\ SetMEIsHostile
+			\ SetMEIsHostileC
+			\ SetMELight
+			\ SetMELightC
+			\ SetMEMagnitudePercent
+			\ SetMEMagnitudePercentC
+			\ SetMEModel
+			\ SetMEModelC
+			\ SetMEName
+			\ SetMENameC
+			\ SetMENoArea
+			\ SetMENoAreaC
+			\ SetMENoDuration
+			\ SetMENoDurationC
+			\ SetMENoHitEffect
+			\ SetMENoHitEffectC
+			\ SetMENoIngredient
+			\ SetMENoIngredientC
+			\ SetMENoMagnitude
+			\ SetMENoMagnitudeC
       \ SetMenuFloatValue
       \ SetMenuStringValue
+			\ SetMEOnSelfAllowed
+			\ SetMEOnSelfAllowedC
+			\ SetMEOnTargetAllowed
+			\ SetMEOnTargetAllowedC
+			\ SetMEOnTouchAllowed
+			\ SetMEOnTouchAllowedC
+			\ SetMEOtherActorValue
+			\ SetMEOtherActorValueC
+			\ SetMEProjectileSpeed
+			\ SetMEProjectileSpeedC
       \ SetMerchantContainer
+			\ SetMEResistValue
+			\ SetMEResistValueC
+			\ SetMESchool
+			\ SetMESchoolC
       \ SetMessageIcon
       \ SetMessageSound
-      \ SetModLocalData
+			\ SetMEUseActorValue
+			\ SetMEUseActorValueC
+			\ SetMEUsedObject
+			\ SetMEUsedObjectC
+			\ SetMEUsesArmor
+			\ SetMEUsesArmorC
+			\ SetMEUsesAttribute
+			\ SetMEUsesAttributeC
+			\ SetMEUsesCreature
+			\ SetMEUsesCreatureC
+			\ SetMEUsesSkill
+			\ SetMEUsesSkillC
+			\ SetMEUsesWeapon
+			\ SetMEUsesWeaponC
       \ SetModelPath
+      \ SetModLocalData
       \ SetMouseSpeedX
       \ SetMouseSpeedY
+      \ SetMPSpell
       \ SetName
       \ SetNameEx
       \ SetNoPersuasion
-      \ SetNthAEMagnitude
       \ SetNthActiveEffectMagnitude
-      \ SetNthEIAV
-      \ SetNthEIAVC
-      \ SetNthEIArea
-      \ SetNthEIDuration
-      \ SetNthEIMagnitude
-      \ SetNthEIRange
-      \ SetNthEISHostile
-      \ SetNthEISName
-      \ SetNthEISSchool
-      \ SetNthEISVisualEffect
-      \ SetNthEISVisualEffectC
-      \ SetNthEIScript
+      \ SetNthAEMagnitude
       \ SetNthEffectItemActorValue
       \ SetNthEffectItemActorValueC
       \ SetNthEffectItemArea
@@ -2109,10 +2216,21 @@ syn keyword obseFunction
       \ SetNthEffectItemScriptSchool
       \ SetNthEffectItemScriptVisualEffect
       \ SetNthEffectItemScriptVisualEffectC
+      \ SetNthEIArea
+      \ SetNthEIAV
+      \ SetNthEIAVC
+      \ SetNthEIDuration
+      \ SetNthEIMagnitude
+      \ SetNthEIRange
+      \ SetNthEIScript
+      \ SetNthEISHostile
+      \ SetNthEISName
+      \ SetNthEISSchool
+      \ SetNthEISVisualEffect
+      \ SetNthEISVisualEffectC
       \ SetNthFactionRankNameEX
       \ SetNumericGameSetting
       \ SetNumericINISetting
-      \ SetOLMPGrids
       \ SetObjectCharge
       \ SetObjectHealth
       \ SetOffersApparatus
@@ -2130,15 +2248,10 @@ syn keyword obseFunction
       \ SetOffersSpells
       \ SetOffersTraining
       \ SetOffersWeapons
+      \ SetOLMPGrids
       \ SetOpenKey
       \ SetOpenSound
       \ SetOwnership_T
-      \ SetPCAMurderer
-      \ SetPCAttributeBonus
-      \ SetPCAttributeBonusC
-      \ SetPCLevelOffset
-      \ SetPCMajorSkillUps
-      \ SetPCTrainingSessionsUsed
       \ SetPackageAllowFalls
       \ SetPackageAllowSwimming
       \ SetPackageAlwaysRun
@@ -2166,6 +2279,12 @@ syn keyword obseFunction
       \ SetPackageUseHorse
       \ SetPackageWeaponsUnequipped
       \ SetPathNodeDisabled
+      \ SetPCAMurderer
+      \ SetPCAttributeBonus
+      \ SetPCAttributeBonusC
+      \ SetPCLevelOffset
+      \ SetPCMajorSkillUps
+      \ SetPCTrainingSessionsUsed
       \ SetPlayerProjectile
       \ SetPlayerSkeletonPath
       \ SetPlayerSkillAdvances
@@ -2240,28 +2359,29 @@ syn keyword obseFunction
       \ SetWindSpeed
       \ Sin
       \ Sinh
+      \ sqrt
       \ SquareRoot
       \ Tan
       \ Tanh
       \ TapControl
       \ TapKey
       \ TestExpr
-      \ ToLower
-      \ ToNumber
-      \ ToString
-      \ ToUpper
       \ ToggleCreatureModel
       \ ToggleFirstPerson
       \ ToggleSkillPerk
       \ ToggleSpecialAnim
+      \ ToLower
+      \ ToNumber
+      \ ToString
+      \ ToUpper
       \ TriggerPlayerSkillUse
       \ TriggerPlayerSkillUseC
       \ TypeOf
-      \ UnHammerKey
       \ UncompleteQuest
       \ UnequipItemNS
       \ UnequipItemSilent
       \ UnequipMe
+      \ UnHammerKey
       \ Update3D
       \ UpdateTextInput
       \ VecMag
@@ -2271,7 +2391,6 @@ syn keyword obseFunction
       \ VectorMagnitude
       \ VectorNormalize
       \ ZeroMat
-      \ sqrt
 " }}}
 
 " Array Functions {{{
