@@ -2,7 +2,7 @@
 " Language: OBSE Script (OBSEScript)
 " Original Creator: Ulthar Seramis
 " Maintainer: Kat
-" Latest Revision: 08 August 2021
+" Latest Revision: 08 September 2021
 
 if exists("b:current_syntax")
   finish
@@ -1058,6 +1058,9 @@ syn keyword obseFunction
       \ GetLastEnchantedItem
       \ GetLastSigilStoneCreatedItem
       \ GetLastSigilStoneEnchantedItem
+			\ GetLastSS
+			\ GetLastSSCreated
+			\ GetLastSSItem
       \ GetLastTransactionItem
       \ GetLastTransactionQuantity
       \ GetLastUniqueCreatedPotion
@@ -1339,6 +1342,7 @@ syn keyword obseFunction
       \ GetProjectileSource
       \ GetProjectileSpeed
       \ GetProjectileType
+			\ GetQR
       \ GetQuality
       \ GetQuantityMenuCurrentQuantity
       \ GetQuantityMenuItem
