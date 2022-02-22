@@ -1074,6 +1074,7 @@ syn keyword obseFunction
       \ GetLightRadius
       \ GetLightRGB
       \ GetLinkedDoor
+			\ GetLoadedTypeArray
       \ GetLocalGravity
       \ GetLoopSound
       \ GetLowActors
@@ -1566,6 +1567,7 @@ syn keyword obseFunction
       \ IsMagicItemAutoCalc
       \ IsMajor
       \ IsMajorC
+			\ IsMajorRef
       \ IsMapMarkerVisible
       \ IsMECanRecover
       \ IsMECanRecoverC
@@ -1586,6 +1588,8 @@ syn keyword obseFunction
       \ IsMEOnTouchAllowed
       \ IsMEOnTouchAllowedC
       \ IsMinimalUseDoor
+			\ IsMisc
+			\ IsMiscItem
       \ IsModelPathValid
       \ IsModLoaded
       \ IsMovingBackward
@@ -1872,12 +1876,14 @@ syn keyword obseFunction
       \ SetBookIsScroll
       \ SetBookSkillTaught
       \ SetButtonPressed
+			\ SetCameraFOV2
       \ SetCanCastPower
       \ SetCanCorpseCheck
       \ SetCanFastTravelFromWorld
       \ SetCanTravelToMapMarker
       \ SetCellBehavesAsExterior
       \ SetCellClimate
+			\ SetCellFactionRank
       \ SetCellHasWater
       \ SetCellIsPublic
       \ SetCellLighting
@@ -1993,6 +1999,7 @@ syn keyword obseFunction
       \ SetFogDayNear
       \ SetFogNightFar
       \ SetFogNightNear
+			\ SetFOV2
       \ SetFunctionValue
       \ SetGameDifficulty
       \ SetGoldValue
@@ -2256,6 +2263,8 @@ syn keyword obseFunction
       \ SetOpenKey
       \ SetOpenSound
       \ SetOwnership_T
+			\ SetOwningFactionRank
+			\ SetOwningFactionRequiredRank
       \ SetPackageAllowFalls
       \ SetPackageAllowSwimming
       \ SetPackageAlwaysRun
@@ -2282,6 +2291,7 @@ syn keyword obseFunction
       \ SetPackageUnlockDoorsAtStart
       \ SetPackageUseHorse
       \ SetPackageWeaponsUnequipped
+			\ SetParentCellOwningFactionRequiredRank
       \ SetPathNodeDisabled
       \ SetPCAMurderer
       \ SetPCAttributeBonus
