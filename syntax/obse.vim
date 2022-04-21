@@ -781,6 +781,7 @@ syn keyword obseFunction
       \ DisableControl
       \ DisableKey
       \ DisableMouse
+      \ DispatchEvent
       \ DispelNthActiveEffect
       \ DispelNthAE
       \ DSin
