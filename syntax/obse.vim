@@ -2717,22 +2717,22 @@ syn keyword switchNightEyeShaderFunction
 
 " Oblivion Reloaded Functions {{{
 syn keyword oblivionReloadedFunction
-      \ ORGetCustomEffectValue
-      \ ORGetEffectValue
-      \ ORGetLocationName
-      \ ORGetSections
-      \ ORGetSetting
-      \ ORGetSettings
-      \ ORGetShaders
-      \ ORGetShaderValue
-      \ ORLoadSettings
-      \ ORPurgeResources
-      \ ORSaveSettings
-      \ ORScreenshot
-      \ ORSetCustomEffectValue
-      \ ORSetSetting
+      \ cameralookat
+      \ cameralookatposition
+      \ camerareset
+      \ camerarotate
+      \ camerarotatetoposition
+      \ cameratranslate
+      \ cameratranslatetoposition
+      \ getlocationname
+      \ getsetting
+      \ getversion
+      \ getweathername
+      \ isthirdperson
+      \ setcustomconstant
+      \ setextraeffectenabled
+      \ setsetting
 " }}}
-
 " menuQue Functions {{{
 syn keyword menuQueFunction
       \ GetAllSkills
