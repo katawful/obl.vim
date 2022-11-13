@@ -1,5 +1,8 @@
-# obse.vim
+# obl.vim
 This is the basic syntax files for TES 4: Oblivion's internal scripting language.
+
+**Ob**livion **L**anguage
+
 The following features are available:
 * Full syntax support
 * Auto indent for blocks
@@ -7,10 +10,9 @@ The following features are available:
 
 The following file extensions are accepted:
 * .obl
-* .esp
-* .esm
 * .obse
 * .oblivion
+* .obscript
 
 # Installation
 This is supported by any version of Vim that is compatible with Vim 8.2 or newer.
@@ -21,8 +23,7 @@ Plug 'katawful/obse.vim'
 ```
 
 # Support
-Only the features listed will ever receive work.
-Future VimL 9 and NeoVim 0.5.0 plugins are in the works for more featured use.
+PR has been submitted to Vim
 
 # License
 This is licensed under the GNU General Public License v3.0 license

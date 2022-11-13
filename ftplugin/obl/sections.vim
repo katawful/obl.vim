@@ -1,3 +1,10 @@
+" Vim sections file
+" Language:    Oblivion Language (obl)
+" Original Creator: Kat <katisntgood@gmail.com>
+" Maintainer:  Kat <katisntgood@gmail.com>
+" Created:     August 08, 2021
+" Last Change: 13 November 2022
+
 noremap <script> <buffer> <silent> [[ <nop>
 noremap <script> <buffer> <silent> ]] <nop>
 

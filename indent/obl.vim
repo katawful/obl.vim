@@ -1,25 +1,26 @@
 " Vim indent file
-" Language:    OB Script
+" Language:    Oblivion Language (obl)
+" Original Creator: Kat <katisntgood@gmail.com>
 " Maintainer:  Kat <katisntgood@gmail.com>
-" Created:     February 01, 2021
-" Last Change: February 01, 2021
+" Created:     01 November 2021
+" Last Change: 13 November 2022
 
 if exists("b:did_indent")
   finish
 endif
 let b:did_indent = 1
 
-setlocal indentexpr=GetObseIndent()
+setlocal indentexpr=GetOblIndent()
 setlocal indentkeys+==~endif,=~else,=~loop,=~end
 
-if exists("*GetObseIndent")
+if exists("*GetOblIndent")
   finish
 endif
 let s:keepcpo= &cpo
 set cpo&vim
 
 let s:SKIP_LINES = '^\s*\(;.*\)'
-function! GetObseIndent()
+function! GetOblIndent()
 
   let lnum = prevnonblank(v:lnum - 1)
   let cur_text = getline(v:lnum)

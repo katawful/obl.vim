@@ -1,163 +1,163 @@
 " Vim syntax file
-" Language: OBSE Script (OBSEScript)
+" Language: Oblivion Language (obl)
 " Original Creator: Ulthar Seramis
-" Maintainer: Kat
-" Latest Revision: 08 November 2022
+" Maintainer: Kat <katisntgood@gmail.com>
+" Latest Revision: 13 November 2022
 
 if exists("b:current_syntax")
   finish
 endif
 
-let b:current_syntax = 'obse'
+let b:current_syntax = 'obl'
 " obscript is case insensitive
 syntax case ignore
 
 " Statements {{{
-syn keyword obseStatement set let to skipwhite
+syn keyword oblStatement set let to skipwhite
 " the second part needs to be separate as to not mess up the next group
-syn match obseStatementTwo ":="
+syn match oblStatementTwo ":="
 " }}}
 
 " Regex matched objects {{{
 " these are matched with regex and thus must be set first
-syn match obseNames '\w\+'
-syn match obseScriptNameRegion '\i\+' contained
-syn match obseVariable '\w*\S' contained
-syn match obseReference '\zs\w\+\>\ze\.'
+syn match oblNames '\w\+'
+syn match oblScriptNameRegion '\i\+' contained
+syn match oblVariable '\w*\S' contained
+syn match oblReference '\zs\w\+\>\ze\.'
 " }}}
 
 " Operators {{{
-syn match obseOperator "\v\*"
-syn match obseOperator "\v\-"
-syn match obseOperator "\v\+"
-syn match obseOperator "\v\/"
-syn match obseOperator "\v\^"
-syn match obseOperator "\v\="
-syn match obseOperator "\v\>"
-syn match obseOperator "\v\<"
-syn match obseOperator "\v\!"
-syn match obseOperator "\v\&"
-syn match obseOperator "\v\|"
+syn match oblOperator "\v\*"
+syn match oblOperator "\v\-"
+syn match oblOperator "\v\+"
+syn match oblOperator "\v\/"
+syn match oblOperator "\v\^"
+syn match oblOperator "\v\="
+syn match oblOperator "\v\>"
+syn match oblOperator "\v\<"
+syn match oblOperator "\v\!"
+syn match oblOperator "\v\&"
+syn match oblOperator "\v\|"
 " }}}
 
 " Numbers {{{
-syn match obseInt '\d\+'
-syn match obseInt '[-+]\d\+'
-syn match obseFloat '\d\+\.\d*' 
-syn match obseFloat '[-+]\d\+\.\d*'
+syn match oblInt '\d\+'
+syn match oblInt '[-+]\d\+'
+syn match oblFloat '\d\+\.\d*' 
+syn match oblFloat '[-+]\d\+\.\d*'
 " }}}
 
 " Comments and strings {{{
 setlocal commentstring=;%s
-syn region obseComment start=";" end="$" keepend fold contains=obseToDo
-syn region obseString start=/"/ end=/"/ keepend fold contains=obseStringFormatting
-syn match obseStringFormatting "%%" contained
-syn match obseStringFormatting "%a" contained
-syn match obseStringFormatting "%B" contained
-syn match obseStringFormatting "%b" contained
-syn match obseStringFormatting "%c" contained
-syn match obseStringFormatting "%e" contained
-syn match obseStringFormatting "%g" contained
-syn match obseStringFormatting "%i" contained
-syn match obseStringFormatting "%k" contained
-syn match obseStringFormatting "%n" contained
-syn match obseStringFormatting "%p" contained
-syn match obseStringFormatting "%ps" contained
-syn match obseStringFormatting "%pp" contained
-syn match obseStringFormatting "%po" contained
-syn match obseStringFormatting "%q" contained
-syn match obseStringFormatting "%r" contained
-syn match obseStringFormatting "%v" contained
-syn match obseStringFormatting "%x" contained
-syn match obseStringFormatting "%z" contained
-syn match obseStringFormatting "%{" contained
-syn match obseStringFormatting "%}" contained
-syn match obseStringFormatting "%\d*.\d*f" contained
-syn match obseStringFormatting "% \d*.\d*f" contained
-syn match obseStringFormatting "%-\d*.\d*f" contained
-syn match obseStringFormatting "%+\d*.\d*f" contained
-syn match obseStringFormatting "%\d*.\d*e" contained
-syn match obseStringFormatting "%-\d*.\d*e" contained
-syn match obseStringFormatting "% \d*.\d*e" contained
-syn match obseStringFormatting "%+\d*.\d*e" contained
-syn keyword obseToDo contained TODO todo Todo ToDo FIXME fixme NOTE note
+syn region oblComment start=";" end="$" keepend fold contains=oblToDo
+syn region oblString start=/"/ end=/"/ keepend fold contains=oblStringFormatting
+syn match oblStringFormatting "%%" contained
+syn match oblStringFormatting "%a" contained
+syn match oblStringFormatting "%B" contained
+syn match oblStringFormatting "%b" contained
+syn match oblStringFormatting "%c" contained
+syn match oblStringFormatting "%e" contained
+syn match oblStringFormatting "%g" contained
+syn match oblStringFormatting "%i" contained
+syn match oblStringFormatting "%k" contained
+syn match oblStringFormatting "%n" contained
+syn match oblStringFormatting "%p" contained
+syn match oblStringFormatting "%ps" contained
+syn match oblStringFormatting "%pp" contained
+syn match oblStringFormatting "%po" contained
+syn match oblStringFormatting "%q" contained
+syn match oblStringFormatting "%r" contained
+syn match oblStringFormatting "%v" contained
+syn match oblStringFormatting "%x" contained
+syn match oblStringFormatting "%z" contained
+syn match oblStringFormatting "%{" contained
+syn match oblStringFormatting "%}" contained
+syn match oblStringFormatting "%\d*.\d*f" contained
+syn match oblStringFormatting "% \d*.\d*f" contained
+syn match oblStringFormatting "%-\d*.\d*f" contained
+syn match oblStringFormatting "%+\d*.\d*f" contained
+syn match oblStringFormatting "%\d*.\d*e" contained
+syn match oblStringFormatting "%-\d*.\d*e" contained
+syn match oblStringFormatting "% \d*.\d*e" contained
+syn match oblStringFormatting "%+\d*.\d*e" contained
+syn keyword oblToDo contained TODO todo Todo ToDo FIXME fixme NOTE note
 " }}}
 
 
 " Conditionals {{{
-syn match obseCondition "If"
-syn match obseCondition "Eval"
-syn match obseCondition "Return"
-syn match obseCondition "EndIf"
-syn match obseCondition "ElseIf"
-syn match obseCondition "Else"
+syn match oblCondition "If"
+syn match oblCondition "Eval"
+syn match oblCondition "Return"
+syn match oblCondition "EndIf"
+syn match oblCondition "ElseIf"
+syn match oblCondition "Else"
 " }}}
 
 " Repeat loops {{{
-syn match obseRepeat "Label" 
-syn match obseRepeat "GoTo"
-syn match obseRepeat "While"
-syn match obseRepeat "Loop"
-syn match obseRepeat "ForEach"
-syn match obseRepeat "Break"
-syn match obseRepeat "Continue"
+syn match oblRepeat "Label" 
+syn match oblRepeat "GoTo"
+syn match oblRepeat "While"
+syn match oblRepeat "Loop"
+syn match oblRepeat "ForEach"
+syn match oblRepeat "Break"
+syn match oblRepeat "Continue"
 " }}}
 
 " Basic Types {{{
-syn keyword obseTypes array_var float int long ref reference short string_var nextgroup=obseNames skipwhite
-syn keyword obseOtherKey Player player playerRef playerREF PlayerRef PlayerREF
-syn keyword obseScriptName ScriptName scriptname Scriptname scn nextgroup=obseScriptNameRegion skipwhite
-syn keyword obseBlock Begin End
+syn keyword oblTypes array_var float int long ref reference short string_var nextgroup=oblNames skipwhite
+syn keyword oblOtherKey Player player playerRef playerREF PlayerRef PlayerREF
+syn keyword oblScriptName ScriptName scriptname Scriptname scn nextgroup=oblScriptNameRegion skipwhite
+syn keyword oblBlock Begin End
 " }}}
 
 " Fold {{{
 setlocal foldmethod=syntax
-syn cluster obseNoFold contains=obseComment,obseString
-syn region obseFoldIfContainer
+syn cluster oblNoFold contains=oblComment,oblString
+syn region oblFoldIfContainer
       \ start="^\s*\<if\>"
       \ end="^\s*\<endif\>"
       \ keepend extend
-      \ containedin=ALLBUT,@obseNoFold
-      \ contains=ALLBUT,obseScriptName,obseScriptNameRegion
-syn region obseFoldIf
+      \ containedin=ALLBUT,@oblNoFold
+      \ contains=ALLBUT,oblScriptName,oblScriptNameRegion
+syn region oblFoldIf
       \ start="^\s*\<if\>"
       \ end="^\s*\<endif\>"
       \ fold
       \ keepend
-      \ contained containedin=obseFoldIfContainer
-      \ nextgroup=obseFoldElseIf,obseFoldElse
+      \ contained containedin=oblFoldIfContainer
+      \ nextgroup=oblFoldElseIf,oblFoldElse
       \ contains=TOP,NONE
-syn region obseFoldElseIf
+syn region oblFoldElseIf
       \ start="^\s*\<elseif\>"
       \ end="^\s*\<endif\>"
       \ fold
       \ keepend
-      \ contained containedin=obseFoldIfContainer
-      \ nextgroup=obseFoldElseIf,obseFoldElse
+      \ contained containedin=oblFoldIfContainer
+      \ nextgroup=oblFoldElseIf,oblFoldElse
       \ contains=TOP
-syn region obseFoldElse
+syn region oblFoldElse
       \ start="^\s*\<else\>"
       \ end="^\s*\<endif\>"
       \ fold
       \ keepend
-      \ contained containedin=obseFoldIfContainer
+      \ contained containedin=oblFoldIfContainer
       \ contains=TOP
-syn region obseFoldWhile
+syn region oblFoldWhile
       \ start="^\s*\<while\>"
       \ end="^\s*\<loop\>"
       \ fold
       \ keepend extend
       \ contains=TOP
-      \ containedin=ALLBUT,@obseNoFold
+      \ containedin=ALLBUT,@oblNoFold
 " fold for loops
-syn region obseFoldFor
+syn region oblFoldFor
       \ start="^\s*\<foreach\>"
       \ end="^\s*\<loop\>"
       \ fold
       \ keepend extend
       \ contains=TOP
-      \ containedin=ALLBUT,@obseNoFold
-      \ nextgroup=obseVariable
+      \ containedin=ALLBUT,@oblNoFold
+      \ nextgroup=oblVariable
 " }}}
 
 " Skills and Attributes {{{
@@ -194,7 +194,7 @@ syn keyword skillAttribute
 " }}}
 
 " Block Types {{{
-syn keyword obseBlockType
+syn keyword oblBlockType
       \ ExitGame
       \ ExitToMainMenu
       \ Function
@@ -655,7 +655,7 @@ syn keyword csFunction
 " }}}
 
 " OBSE Functions {{{
-syn keyword obseFunction
+syn keyword oblFunction
       \ abs
       \ acos
       \ activate2
@@ -1284,8 +1284,8 @@ syn keyword obseFunction
       \ getobjecthealth
       \ getobjecttype
       \ getobliviondirectory
-      \ getobserevision
-      \ getobseversion
+      \ getoblrevision
+      \ getoblversion
       \ getopenkey
       \ getopensound
       \ getowner
@@ -2462,7 +2462,7 @@ syn keyword obseFunction
 " }}}
 
 " Array Functions {{{
-syn keyword obseArrayFunction
+syn keyword oblArrayFunction
       \ ar_Append
       \ ar_BadNumericIndex
       \ ar_BadStringIndex
@@ -2493,7 +2493,7 @@ syn keyword obseArrayFunction
 " }}}
 
 " String Functions {{{
-syn keyword obseStringFunction
+syn keyword oblStringFunction
       \ sv_ToLower
       \ sv_ToUpper
       \ sv_Compare
@@ -3294,37 +3294,37 @@ syn keyword obDeprecated
 " }}}
 " }}}
 
-if !exists("did_obse_inits")
+if !exists("did_obl_inits")
 
-  let did_obse_inits = 1
-  hi def link obseStatement Statement
-  hi def link obseStatementTwo Statement
-  hi def link obseDescBlock String
-  hi def link obseComment Comment
-  hi def link obseString String
-  hi def link obseStringFormatting Keyword
-  hi def link obseFloat Float
-  hi def link obseInt Number
-  hi def link obseToDo Todo
-  hi def link obseTypes Type
-  hi def link obseCondition Conditional
-  hi def link obseOperator Operator
-  hi def link obseOtherKey Special
-  hi def link obseScriptName Special
-  hi def link obseBlock Conditional
-  hi def link obseBlockType Structure
-  hi def link obseScriptNameRegion Underlined
-  hi def link obseNames Identifier
-  hi def link obseVariable Identifier
-  hi def link obseReference Special
-  hi def link obseRepeat Repeat
+  let did_obl_inits = 1
+  hi def link oblStatement Statement
+  hi def link oblStatementTwo Statement
+  hi def link oblDescBlock String
+  hi def link oblComment Comment
+  hi def link oblString String
+  hi def link oblStringFormatting Keyword
+  hi def link oblFloat Float
+  hi def link oblInt Number
+  hi def link oblToDo Todo
+  hi def link oblTypes Type
+  hi def link oblCondition Conditional
+  hi def link oblOperator Operator
+  hi def link oblOtherKey Special
+  hi def link oblScriptName Special
+  hi def link oblBlock Conditional
+  hi def link oblBlockType Structure
+  hi def link oblScriptNameRegion Underlined
+  hi def link oblNames Identifier
+  hi def link oblVariable Identifier
+  hi def link oblReference Special
+  hi def link oblRepeat Repeat
 
   hi def link csFunction Function
-  hi def link obseFunction Function
-  hi def link obseArrayFunction Function
+  hi def link oblFunction Function
+  hi def link oblArrayFunction Function
   hi def link pluggyFunction Function
-  hi def link obseStringFunction Function
-  hi def link obseArrayFunction Function
+  hi def link oblStringFunction Function
+  hi def link oblArrayFunction Function
   hi def link tsfcFunction Function
   hi def link blockheadFunction Function
   hi def link switchNightEyeShaderFunction Function
